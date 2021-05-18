@@ -1,0 +1,25 @@
+<div class="container-md">
+  <div class="content" role="main">
+    <div class="card">
+      <div class="form-group">
+        <label for="search-text">Search Products</label>
+        <input type="text" class="form-control" id="search-text" aria-describedby="search-text" [(ngModel)]="term"
+          placeholder="Enter text to search" autofocus>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="row">
+
+  <div class="col-xs-12">
+   
+    <app-product-item *ngFor="let product of products | filter:term; let i = index;" [product]="product" [index]="i">
+    </app-product-item>
+  </div>
+
+  <div *ngIf="products.length == 0" class="col-xs-12">
+    <p style="font-size: 24px; font-weight: 600;"> No Products Found</p>
+  </div>
+</div>

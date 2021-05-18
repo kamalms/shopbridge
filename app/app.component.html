@@ -1,0 +1,13 @@
+<app-header></app-header>
+<div class="container">
+  <div class="heading">
+  <h1>Shop Bridge Admin- Inventory Management</h1>
+  <button type="button" class="btn btn-primary" [routerLink]="'add-item'">Add Item</button>
+  
+</div>
+
+<div>
+  <app-alert-msg [alertMessage]="alertText"></app-alert-msg>
+</div>
+<router-outlet></router-outlet>
+</div>

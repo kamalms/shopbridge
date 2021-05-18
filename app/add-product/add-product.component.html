@@ -1,0 +1,120 @@
+<div class="row">
+    <div class="col-xs-12">
+        <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="form-group">
+                        <label for="name">Product Name</label>
+                        <input type="text" id="name" formControlName="pname" class="form-control">
+                        <div style="margin-top:5px"
+                            *ngIf="productForm.get('pname').invalid && (productForm.get('pname').dirty || productForm.get('pname').touched)"
+                            class="alert alert-danger">
+
+                            <div *ngIf="productForm.get('pname').errors.required">
+                                Product Name is required.
+                            </div>
+                            <div *ngIf="productForm.get('pname').errors.minlength">
+                                Name cannot be more than 30 characters long.
+                            </div>
+                            <div *ngIf="productForm.get('pname').errors.minlength">
+                                Name must be at least 6 characters long.
+                            </div>
+                            <div *ngIf="productForm.get('pname').errors">
+                                Price must be number format
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <textarea type="text" id="description" class="form-control" formControlName="description"
+                            rows="6"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="form-group">
+                        <label for="name">Price</label>
+                        <input type="text" id="name" formControlName="price" class="form-control">
+                        <div style="margin-top:5px"
+                            *ngIf="productForm.get('price').invalid && (productForm.get('price').dirty || productForm.get('price').touched)"
+                            class="alert alert-danger">
+
+                            <div *ngIf="productForm.get('price').errors.required">
+                                Price is required.
+                            </div>
+                            <div *ngIf="productForm.get('price').errors">
+                                Price must be number format
+                            </div>
+                            <div *ngIf="productForm.get('price').errors.minlength">
+                                Name must be at least 2 characters long.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- category adding  -->
+
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="form-group">
+                        <label for="name">Category</label>
+                        <!-- <input
+                  type="text"
+                  id="name"
+                  formControlName="stocks"
+                  class="form-control"> -->
+
+
+
+                        <select class="form-select form-control form-control-lg" formControlName="category"
+                            id="category" aria-label="Default select example">
+                            <option value="default">Open this select menu</option>
+                            <option *ngFor="let c of categories" [ngValue]="c">{{c}}</option>
+                        </select>
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="form-group">
+                        <label for="name">Stocks Available (Quantity)</label>
+                        <input type="text" id="name" formControlName="stocks" class="form-control">
+                        <div style="margin-top:5px"
+                            *ngIf="productForm.get('stocks').invalid && (productForm.get('stocks').dirty || productForm.get('stocks').touched)"
+                            class="alert alert-danger">
+
+                            <div *ngIf="productForm.get('stocks').errors.required">
+                                Stock is required.
+                            </div>
+                            <div *ngIf="productForm.get('stocks').errors">
+                                Stock must be number format
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row" style="text-align: right;">
+                <div class="col-xs-12">
+                    <button style="margin-right: 10px;" type="submit" class="btn btn-success"
+                        [disabled]="!productForm.valid">Save</button>
+                    <button type="button" class="btn btn-danger" (click)="onCancel()">Cancel</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

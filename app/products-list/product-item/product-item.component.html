@@ -1,0 +1,22 @@
+<a
+  style="cursor: pointer;"
+  routerLinkActive="active"
+  class="list-group-item clearfix">
+
+  <div class="pull-left"  (click) ="onEditProduct()">
+    <h4 class="list-group-item-heading">{{ product.pname }}</h4>
+    <p class="list-group-item-text">{{ product.description }}</p>
+   <span class="price">Price</span>     <span>{{product?.price}}</span>
+   <div> <span style="font-weight: 600;"> Stocks Available </span>  <span>{{product?.stocks}} </span></div>
+
+   <div> <span style="font-weight: 600;"> Category </span>  <span>{{product?.category}} </span></div>
+  </div>
+
+      <div class="button-container">
+        <button type="button" class="btn btn-success editbtn" (click)="onEditProduct()">Edit</button>
+        
+        <button type="button"  (click)="onDeleteProduct()" class="btn btn-danger">Delete</button>
+      </div>
+</a>
+
+

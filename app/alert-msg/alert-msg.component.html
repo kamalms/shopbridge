@@ -1,0 +1,7 @@
+<div *ngIf="!alertMessage.warning" class="alert alert-success" role="alert">
+    {{alertMessage.msg}}
+  </div>
+
+  <div *ngIf="alertMessage.warning" class="alert alert-danger" role="alert">
+    {{alertMessage.msg}}
+  </div>

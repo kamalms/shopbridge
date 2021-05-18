@@ -1,0 +1,44 @@
+{
+    "products": [
+        {  
+          "id": 1,  
+          "pname": "iPhone X",
+           "description" : "Product one Description , it is new product to Mobile Categories",
+           "price" : 45000,
+           "stocks": 13,
+           "category" : "Mobiles"
+        },
+        {  
+            "id": 2,  
+            "pname": "Samsung Galaxy",
+             "description" : "One of the Galaxy model from Samsumg World. Best Mobile in Android platform.",
+             "price" : 59000,
+             "stocks": 100,
+             "category" : "Mobiles"
+          },
+          {  
+            "id": 1,  
+            "pname": "Nokia 139 cm TV",
+             "description" : "Bring home this TV from Nokia and deep-dive into a world of lifelike colours. Boasting a sleek and stunning design, this TV features Micro Dimming and a MaxBrite Display to ensure that you enjoy clear and crisp detail with vibrant colours",
+             "price" : 41999,
+             "stocks": 10,
+             "category" : "Televisions"
+          },
+          {  
+            "id": 1,  
+            "pname": "MOTOROLA ZX 139 cm Android TV ",
+             "description" : "Whether you're watching a movie, your favourite TV show, or playing a game on a console with your friends, this Ultra HD (4K) LED Smart Android TV from Motorola is here to transform your entertainment experience. While features such as AutoTuneX Display Technology and Dolby Vision + HDR 10 provide stunning visual quality, the AmphiSoundX feature provides an amazing sound experience. Also, with this TV's remote that comes with Hotkeys and Google Assistant, finding and navigating content is a piece of cake",
+             "price" : 38000,
+             "stocks": 25,
+             "category" : "Televisions"
+          },
+          {  
+            "id": 1,  
+            "pname": "OnePlus Y Series 108 cm",
+             "description" : "The Gamma Engine, along with the noise reduction feature, delivers lifelike visuals with dynamic contrast and anti-aliasing to enhance your viewing experience, reduction feature, delivers lifelike visuals with",
+             "price" : 26500,
+             "stocks": 10,
+             "category" : "Televisions"
+          }
+      ]
+  }

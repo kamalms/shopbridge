@@ -5,3 +5,5 @@ Angular version used 8
 **npm install** to install the dependencies
 
 **npm run mock:server** to run mock services 
+
+**ng serve** to run app locally localhost:4200
